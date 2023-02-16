@@ -25,4 +25,26 @@ public class FindMaxTest {
         assertEquals(expected,40);
 
     }
+
+    @Test
+    public void findMaxFloatTest1(){
+
+        float expected=   obj.findMaxFloat(40.0f,30.0f,20.0f);
+        assertEquals(expected,40.0f);
+
+    }
+    @Test
+    public void findMaxFloatTest2(){
+
+        float expected=   obj.findMaxFloat(30.0f,40.0f,20.0f);
+        assertEquals(expected,40.0f);
+
+    }
+    @Test
+    public void findMaxFloatTest3(){
+
+        float expected=   obj.findMaxFloat(20.0f,40.0f,30.0f);
+        assertEquals(expected,40.0f);
+
+    }
 }
