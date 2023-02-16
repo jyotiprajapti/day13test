@@ -47,4 +47,25 @@ public class FindMaxTest {
         assertEquals(expected,40.0f);
 
     }
+    @Test
+    public void findlongestStringTest1(){
+
+        String expected=   obj.findLongestString("abcd","ab","abc");
+        assertEquals(expected,"abcd");
+
+    }
+    @Test
+    public void findlongestStringTest2(){
+
+        String expected=   obj.findLongestString("abc","abcd","ab");
+        assertEquals(expected,"abcd");
+
+    }
+    @Test
+    public void findlongestStringTest3(){
+
+        String expected=   obj.findLongestString("ab","abc","abcd");
+        assertEquals(expected,"abcd");
+
+    }
 }
