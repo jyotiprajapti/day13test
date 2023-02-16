@@ -1,5 +1,8 @@
 import org.example.FindMax;
 import org.junit.Test;
+
+import java.util.ArrayList;
+
 import static junit.framework.TestCase.assertEquals;
 
 public class FindMaxTest<T extends Comparable> {
@@ -69,46 +72,32 @@ public class FindMaxTest<T extends Comparable> {
 //
 //    }
 
+
     @Test
-    public <T extends Comparable> void findMaxTest1(){
-
-     Comparable expected=   obj.findMax(40,30,20);
+    public <T extends Comparable> void findMaxTestFloat(){
+     ArrayList<Integer> list=   new ArrayList<>();
+     list.add(20);
+     list.add(40);
+     list.add(25);
+        Comparable expected=   obj.findMax(list);
      assertEquals(expected,40);
-
     }
     @Test
     public <T extends Comparable> void findMaxTest2(){
-
-        Comparable expected=   obj.findMax(20,30,40);
-     assertEquals(expected,40);
-
+        ArrayList<Float> list=   new ArrayList<>();
+        list.add(20.0f);
+        list.add(40.0f);
+        list.add(25.0f);
+        Comparable expected=   obj.findMax(list);
+        assertEquals(expected,40.0f);
     }
     @Test
-    public <T extends Comparable> void  findMaxTest3(){
-
-        Comparable expected=   obj.findMax(30,40,20);
-     assertEquals(expected,40);
-
-    }
-    @Test
-    public <T extends Comparable> void  findMaxStringTest1(){
-
-        Comparable expected=   obj.findMax("ab","abc","abcd");
+    public <T extends Comparable> void findMaxTestString(){
+        ArrayList<String> list=   new ArrayList<>();
+        list.add("a");
+        list.add("ab");
+        list.add("abcd");
+        Comparable expected=   obj.findMax(list);
         assertEquals(expected,"abcd");
-
-    }
-    @Test
-    public <T extends Comparable> void  findMaxStringTest2(){
-
-        Comparable expected=   obj.findMax("abcd","a","abc");
-        assertEquals(expected,"abcd");
-
-    }
-    @Test
-    public <T extends Comparable> void  findMaxStringTest3(){
-
-        Comparable expected=   obj.findMax("a","abcd","ab");
-        assertEquals(expected,"abcd");
-
     }
 }
